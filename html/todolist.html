@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/todolist.css">
+    <script src="../js/todolist.js" charset = "GBK"></script>
+</head>
+<!--案例: toDoList分析
+①刷新页面不会丢失数据,因此需要用到本地存储localStorage
+②核心思路:不管按下回车,还是点击复选框,都是把本地存储的数据加载到页面中,这样保证刷新关闭页面不会丢失数据
+③存储的数据格式: var todolist= [{ title: 'xxx' , done: false}]
+④注意点1 :本地存储localStorage里面只能存储字符串格式,因此需要把对象转换为字符串JSON.stringify(data)。
+⑤注意点2:获取本地存储数据,需要把里面的字符串转换为对象格式JSON.parse0我们才能使用里面的数据。-->
+<body>
+<div class="header">
+    <div class="wrapper">
+        <span>ToDoList</span>
+        <input type="text" placeholder="添加ToDo" autofocus id="text">
+    </div>
+</div>
+<div class="box">
+    <div class="wrapper">
+        <div class="doing">
+            <h2>正在进行<span class="num">1</span></h2>
+            <ol></ol>
+        </div>
+        <span class="bar"></span>
+        <div class="done">
+            <h2>已经完成<span class="num">1</span></h2>
+            <ul></ul>
+        </div>
+
+    </div>
+</div>
+<footer>
+    <div class="wrapper">
+        <div class="foot_list">
+            <a href="#">关于我们</a>
+            <a href="#">联系我们</a>
+            <a href="#">服务条款</a>
+            <a href="#">隐私政策</a>
+            <a href="#">Cookies使用</a>
+            <a href="#">最终用户许可协议</a>
+        </div>
+        <p class="foot_text">Copyright◎2014 todolist.cn clear</p>
+    </div>
+</footer>
+</body>
+</html>

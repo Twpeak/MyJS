@@ -1,0 +1,105 @@
+body,html{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /*background-color:RGB(203,64,66) ;*/
+    background: linear-gradient(45deg,red,blue);
+}
+.main{
+    width: 50%;
+    margin: 0 auto;
+}
+.time_box{
+    color: white;
+    width: 100%;
+    margin-top: 5%;
+}
+.time_box b{
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+.time_box span{
+    transform: translateY(-2px);
+}
+.rest_time,.tomato_time{
+    padding: 0 30px;
+    font-size: 25px;
+}
+.rest_time{
+    float: left;
+}
+.tomato_time{
+    float: right;
+}
+.set_rest_time{
+
+}
+.set_tomato_time{
+
+}
+.set_tomato_time,.set_rest_time{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.tomato{
+    width: 80%;
+    height: 0;
+    padding-bottom: 80%;
+    border-radius: 50%;
+    border: 4px solid #a8d8b9;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    cursor: pointer;
+    z-index: 20;
+}
+.tomato_text h2{
+    font-size: 4em;
+    color: white;
+}
+.state{
+    margin-top: 34%;
+    margin-bottom: 10px;
+}
+button{
+    display: block;
+    margin: 30px auto;
+    outline: none;
+    border:3px solid #a8d8b9;
+    border-radius: 20px;
+    width: 130px;
+    height: 40px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #a8d8b9;
+    cursor:pointer ;
+}
+.color_box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.paint{
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(#F80006,blue);
+    width: 100%;
+    height: 0;
+    z-index: -1;
+}

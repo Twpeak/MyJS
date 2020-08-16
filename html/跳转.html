@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: red;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 1190px;
+            height: 386px;
+            background-color: pink;
+            margin: 50px auto;
+            box-sizing: border-box;
+            border: darkgray 20px outset;
+            border-radius: 20px;
+        }
+        .image{
+            float: left;
+            background: url("../../image/miao1.jpeg") no-repeat;
+            background-size: cover;
+            width: 30%;
+            height: 100%;
+        }
+        .text{
+            float: right;
+            background-color: aqua;
+            width: 70%;
+            height: 100%;
+            color: #333333;
+            font-weight: 700;
+            font-size: 70px;
+            text-align: center;
+            line-height: 326px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="image"></div>
+    <div class="text"></div>
+</div>
+<script>
+    /*重点：调用定时器时，页面总是空白一秒用来计算，
+    解决方法：
+    把定时器的显示效果包装到函数里，先调用函数，再运行定时器*/
+    var text=document.querySelector('.text');
+    var time=5;
+    function f() {
+        if (time>=0){
+            text.innerHTML='您将在'+time+'秒后跳转到<a href="logon.html">首页</a>';
+            time--;
+        }
+        else{
+            window.location="logon.html";
+        }
+    }
+    f();
+    var dao=setInterval(function () {
+        if (time>=0){
+            text.innerHTML='您将在'+time+'秒后跳转到<a href="logon.html">首页</a>';
+            time--;
+        }
+        else{
+            window.location="logon.html";
+        }
+    },1000);
+
+</script>
+</body>
+</html>

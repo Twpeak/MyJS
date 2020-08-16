@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    color:#32e0c4 ;
+}
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+footer{
+    background-color:#222831;
+    color:#32e0c4;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+li,input,a,button{
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    color: #32e0c4;
+}
+body{
+    pointer-events:none;
+}
+iframe{
+    border: 0;
+}
+iframe,header,footer,.tomato,.clock,.start,.stop,.stage{
+    pointer-events:auto;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.wrapper{
+    height: 100%;
+    width: 80%;
+    margin: auto;
+}
+footer >.wrapper{
+    margin-top: 15px;
+    font-size: 14px;
+}
+.foot_text{
+    color: #999999;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+.foot_list{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.foot_list a{
+    margin-left: 20px;
+    font-weight: 400;
+}
+header{
+    box-shadow: 0 5px 10px 0 rgba(0,64,128,.05);
+}
+.nav{
+    height: 60px;
+    line-height: 60px;
+    width: 100%;
+    background:#393e46 ;
+    color:#32e0c4 ;
+}
+.bars{
+    width: 2px;
+    height: 16px;
+    margin-left:5px ;
+    margin-right: 5px;
+}
+.logon{
+    float: right;
+    margin-right: 40px;
+}
+main{
+    height: 100%;
+}
+.main_box{
+    height: 100%;
+    overflow: hidden;
+    background-color:RGBa(0,0,0,.5) ;
+}
+.img_box{
+    width: 500px;
+    height: 250px;
+    margin: 90px auto;
+}
+.tomato{
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.tomato img,.clock img{
+    transition: all .5s ease;
+}
+.tomato img:hover,.clock img:hover {
+    transform: scale(1.5);
+}
+.tomato img:hover+ span ,.clock img:hover + span{
+    display: none;
+}
+.clock{
+    width: 200px;
+    height: 200px;
+    float: right;
+    margin-left: 300px;
+}
+.clock:active{
+    transform: scale(50);
+}
+.tomato,.clock{
+    transition: all 1s ease;
+    position: absolute;
+}
+.img_box span{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+}
+.Ztranslate150{
+    transform: translateX(150px);
+}
+.Ftranslate150{
+    transform: translateX(-150px);
+}
+.Ztranslate60{
+    transform: translateX(60px);
+}
+.Ftranslate60{
+    transform: translateX(-60px);
+}
+.rol360{
+    animation: rol360 5s linear infinite;
+}
+@keyframes rol360 {
+    from{
+        transform: rotate(0deg);
+    }to{
+    transform: rotate(360deg);
+         }
+}
+.Zrol{
+    /*animation: rol 3s cubic-bezier(.68,-0.55,.5,.98) ;*/
+    animation: Zrol 1s ease;
+}
+@keyframes Zrol {
+    from{
+        transform: rotate(0deg) ;
+    }
+    80%{
+        transform: rotate(390deg) ;
+    }
+    to{
+        transform:rotate(360deg) ;
+        animation-timing-function: ease-in;
+    }
+}
+.Frol{
+    /*animation: rol 3s cubic-bezier(.68,-0.55,.5,.98) ;*/
+    animation: Frol 1s ease;
+}
+@keyframes Frol {
+    from{
+        transform: rotate(0deg) ;
+    }
+    80%{
+        transform: rotate(-390deg) ;
+    }
+    to{
+        transform:rotate(-360deg) ;
+        animation-timing-function: ease-in;
+    }
+}
+/*
+        @keyframes rol {
+            from{
+                transform: rotate(0deg);
+            }
+            60%{
+                transform: rotate(390deg);
+            }
+            to{
+                transform: rotate(360deg) ;
+            }
+        }
+*/
+.music_box{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+}
+.music_box ul{
+    width: 300px;
+    position: absolute;
+    left: -50px;
+    transition: all 1s ease;
+}
+.stop{
+    float: left;
+}
+.start{
+    float: left;
+    margin-right: 10px;
+}
+

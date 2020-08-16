@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/tomato.css">
+    <script src="../js/tomato2.js"></script>
+</head>
+<body>
+<audio id="vd2">
+    <source src="../music/clock.wav" type="audio/wav">
+</audio>
+<audio id="vd3">
+    <source src="../music/rest_finally.wav" type="audio/wav">
+</audio>
+
+<div class="main">
+    <div class="time_box">
+        <div class="rest_time">
+            <p>休息时长</p>
+            <div class="set_rest_time">
+                <b class="decrease">-</b>
+                <span>5</span>
+                <b class="increase">+</b>
+            </div>
+        </div>
+        <div class="tomato_time">
+            <p>番茄时长</p>
+            <div class="set_tomato_time">
+                <b class="decrease">-</b>
+                <span>25</span>
+                <b class="increase">+</b>
+            </div>
+        </div>
+    </div>
+    <div class="tomato">
+        <div class="color_box"><div class="paint"></div></div>
+        <div class="tomato_text">
+            <h2 class="state">LearnTime</h2>
+            <h2 class="count_down">25:00</h2>
+        </div>
+    </div>
+    <button>开始/暂停</button>
+</div>
+</body>
+</html>
